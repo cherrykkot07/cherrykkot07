@@ -1,0 +1,36 @@
+name: Generate Arcade Contribution Graph
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Se ejecuta todos los días a la medianoche
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Contribution Graph
+        uses: lowlighter/metrics@latest
+        with:
+          filename: puzzle-bobble-contribution-graph.svg
+          token: ${{ SECRETS.GITHUB_TOKEN }}
+          base: ""
+          plugin_arcade: yes
+          plugin_arcade_limit: 100
+          plugin_arcade_game: puzzle-bobble
+          outputs: pkg
+
+      - name: Push to pacman-output branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ SECRETS.GITHUB_TOKEN }}
+          publish_branch: pacman-output
+          publish_dir: .
+          keep_files: true
+          user_name: "github-actions[bot]"
+          user_email: "41898282+github-actions[bot]@users.github.com"
