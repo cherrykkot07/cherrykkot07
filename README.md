@@ -44,7 +44,7 @@
   <a href="mailto:cherry_hlyg.091214@hotmail.com" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/microsoft-outlook/default.svg" width="52" height="40" alt="microsoft-outlook logo"  />
   </a>
-  <a href="t.me/GooAndii" target="_blank">
+  <a href="https://t.me/GooAndii" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/telegram/default.svg" width="52" height="40" alt="telegram logo"  />
   </a>
   <a href="mailto:andii.lu0796@gmail.com" target="_blank">
